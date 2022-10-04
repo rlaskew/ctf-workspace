@@ -1,1 +1,5 @@
 ###  thm ubuntu box commands
+
+# port scanning 
+nmap -vv -A ${HOST}
+
