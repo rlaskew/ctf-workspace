@@ -1,5 +1,8 @@
 ###  thm ubuntu box commands
 
+# friendly reminders
+1. Can you accomplish the same task in the shell and not use browser?
+
 # port scanning 
 nmap -vv -A ${HOST}
 
