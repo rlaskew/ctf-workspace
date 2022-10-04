@@ -7,3 +7,5 @@ nmap -vv -A ${HOST}
 dirb http://${HOST} /usr/share/dirb/wordlists/big.txt
 gobuster dir -u http://${HOST} -w /usr/share/wordlists/SecLists/Discovery/Web-Content/big.txt
 
+# github for SecLists
+https://github.com/danielmiessler/SecLists
