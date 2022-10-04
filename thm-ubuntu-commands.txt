@@ -3,3 +3,7 @@
 # port scanning 
 nmap -vv -A ${HOST}
 
+# directory scanning options
+dirb http://${HOST} /usr/share/dirb/wordlists/big.txt
+gobuster dir -u http://${HOST} -w /usr/share/wordlists/SecLists/Discovery/Web-Content/big.txt
+
