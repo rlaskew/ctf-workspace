@@ -3,6 +3,11 @@
 # friendly reminders
 1. Can you accomplish the same task in the shell and not use browser?
 
+# useful github repos
+https://github.com/danielmiessler/SecLists
+https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh
+https://gtfobins.github.io/  - GTFOBins is a curated list of Unix binaries that can be used to bypass local security restrictions in misconfigured systems
+
 # port scanning 
 nmap -vv -A ${HOST}
 
@@ -10,5 +15,10 @@ nmap -vv -A ${HOST}
 dirb http://${HOST} /usr/share/dirb/wordlists/big.txt
 gobuster dir -u http://${HOST} -w /usr/share/wordlists/SecLists/Discovery/Web-Content/big.txt
 
-# github for SecLists
-https://github.com/danielmiessler/SecLists
+# getting linuxenum on target 
+python3 -m http.server 8000
+wget https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
+chmod +x FILENAME.sh
+
+
+
