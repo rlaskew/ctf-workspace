@@ -11,6 +11,10 @@ https://gtfobins.github.io/  - GTFOBins is a curated list of Unix binaries that 
 # cheat sheets
 https://tmuxcheatsheet.com/
 
+# unshadow
+unshadow local_passwd local_shadow > unshadowed
+john --format=sha512crypt --wordlist=/usr/share/wordlists/rockyou.txt unshadowed
+
 # hash cracking: John the ripper
 wget https://gitlab.com/kalilinux/packages/hash-identifier/-/raw/kali/master/hash-id.py
 python hash-id.py ${HASH}
