@@ -8,6 +8,9 @@ https://github.com/danielmiessler/SecLists
 https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh
 https://gtfobins.github.io/  - GTFOBins is a curated list of Unix binaries that can be used to bypass local security restrictions in misconfigured systems
 
+# cheat sheets
+https://tmuxcheatsheet.com/
+
 # port scanning 
 nmap -vv -A ${HOST}
 
