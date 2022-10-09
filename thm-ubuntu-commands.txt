@@ -23,6 +23,13 @@ wget https://gitlab.com/kalilinux/packages/hash-identifier/-/raw/kali/master/has
 python hash-id.py ${HASH}
 john --format=raw-sha256 --wordlist=/usr/share/wordlists/rockyou.txt hash4.txt
 
+# john ssh private keys
+/opt/john/ssh2john.py id_rsa > id_rsa.john
+john --wordlist=/usr/share/wordlists/rockyou.txt id_rsa.john
+
+# password brute force 
+hydra -l kay -P /usr/share/wordlists/rockyou.txt ssh://10.10.220.188
+
 # port scanning 
 nmap -vv -A ${HOST}
 
