@@ -46,6 +46,7 @@ wget https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/ph
 
 # curl 
 curl -X GET --head http://${HOST}   ## only headers
+curl -X GET --basic -u x:y  http://${HOST}:1234/manager/html # basic auth, un/pw
 
 # directory scanning options
 dirb http://${HOST} /usr/share/dirb/wordlists/big.txt
