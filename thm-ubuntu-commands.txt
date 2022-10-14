@@ -12,7 +12,10 @@ https://gtfobins.github.io/  - GTFOBins is a curated list of Unix binaries that 
 https://tmuxcheatsheet.com/
 
 # password brute forcing -- ssh
-hydra -l kay -P /usr/share/wordlists/rockyou.txt ssh://10.10.220.188
+hydra -l ${HYDRA_USER} -P /usr/share/wordlists/rockyou.txt ssh://${TARGET_IP}
+
+# only get headers
+curl -X GET --head http://${WEBSITE}
 
 # unshadow
 unshadow local_passwd local_shadow > unshadowed
