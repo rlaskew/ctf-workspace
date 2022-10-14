@@ -53,6 +53,9 @@ curl -X GET --basic -u x:y  http://${HOST}:1234/manager/html # basic auth, un/pw
 dirb http://${HOST} /usr/share/dirb/wordlists/big.txt
 gobuster dir -u http://${HOST} -w /usr/share/wordlists/SecLists/Discovery/Web-Content/big.txt
 
+# nikto
+nikto -id u:p -h http://${HOST}:1234/manager/html
+
 # getting linuxenum on target 
 python3 -m http.server 8000
 wget https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
