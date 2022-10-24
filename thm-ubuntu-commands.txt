@@ -46,6 +46,7 @@ hydra -l ${HYDRA_USER} -P /usr/share/wordlists/rockyou.txt ${HOST} http-get "/pr
 # port scanning -- there are so many options here, like -sV .. why are you trying more options?
 nmap -vv -A ${VULN_HOST}
 nmap -sV --script vuln $VULN_HOST
+## https://www.tecmint.com/nmap-command-examples/  # TODO: Try this out!!
 
 # reverse shell -- https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
 nc -v -n -l -p 1234
