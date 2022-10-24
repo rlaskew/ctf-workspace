@@ -15,6 +15,9 @@ https://tmuxcheatsheet.com/
 # Good Resources
 https://www.netsecfocus.com/oscp/2021/05/06/The_Journey_to_Try_Harder-_TJnull-s_Preparation_Guide_for_PEN-200_PWK_OSCP_2.0.html
 
+# smb enumeration
+https://www.hackingarticles.in/a-little-guide-to-smb-enumeration/
+
 # password brute forcing -- ssh
 hydra -l ${HYDRA_USER} -P /usr/share/wordlists/rockyou.txt ssh://${TARGET_IP}
 
@@ -40,7 +43,7 @@ hydra -l kay -P /usr/share/wordlists/rockyou.txt ssh://10.10.220.188
 # password brute force - http-get, basic auth 
 hydra -l ${HYDRA_USER} -P /usr/share/wordlists/rockyou.txt ${HOST} http-get "/protected"
 
-# port scanning 
+# port scanning -- there are so many options here, like -sV .. why are you trying more options?
 nmap -vv -A ${VULN_HOST}
 
 # reverse shell -- https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
