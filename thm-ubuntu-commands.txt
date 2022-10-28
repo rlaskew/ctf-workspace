@@ -16,6 +16,7 @@ https://tmuxcheatsheet.com/
 https://www.netsecfocus.com/oscp/2021/05/06/The_Journey_to_Try_Harder-_TJnull-s_Preparation_Guide_for_PEN-200_PWK_OSCP_2.0.html
 https://sectools.org/  
 https://falconspy.medium.com/unofficial-oscp-approved-tools-b2b4e889e707
+https://insecure.org/stf/mudge_buffer_overflow_tutorial.html
 
 # smb enumeration
 https://www.hackingarticles.in/a-little-guide-to-smb-enumeration/
