@@ -53,6 +53,7 @@ nmap -sV --script vuln $VULN_HOST  ## remember to experiment with other script c
 
 # smb/samba enumeration
 enum4linux ${VULN_HOST}  ## nmap gets some data, work a check
+smbclient //${VULN_HOST}/share -U un -p port
 
 # reverse shell -- https://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet
 nc -v -n -l -p 1234
