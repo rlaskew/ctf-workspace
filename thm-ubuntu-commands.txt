@@ -18,6 +18,7 @@ https://sectools.org/
 https://falconspy.medium.com/unofficial-oscp-approved-tools-b2b4e889e707
 https://insecure.org/stf/mudge_buffer_overflow_tutorial.html
 https://github.com/swisskyrepo/PayloadsAllTheThings
+https://www.exploit-db.com/papers/13205 ## gdb walkthrough
 
 # smb enumeration
 https://www.hackingarticles.in/a-little-guide-to-smb-enumeration/
