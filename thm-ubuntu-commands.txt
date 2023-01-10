@@ -31,6 +31,11 @@ https://www.exploit-db.com/papers/13205 ## gdb walkthrough
 # smb enumeration
 https://www.hackingarticles.in/a-little-guide-to-smb-enumeration/
 
+# SNMP based enumeration
+# always worth a check, trying public as community string -- how can we enumerate for snmp commuity string
+# https://gitlab.com/kalilinux/packages/snmpcheck.git
+/opt/snmpcheck/snmpcheck.rb ${VULN_HOST} -c COMMUNITY_STRING
+
 # password brute forcing -- ssh
 hydra -l ${HYDRA_USER} -P /usr/share/wordlists/rockyou.txt ssh://${TARGET_IP}
 hydra -t4 -l mike -P /usr/share/wordlists/rockyou.txt -vV $VULN_HOST ftp
